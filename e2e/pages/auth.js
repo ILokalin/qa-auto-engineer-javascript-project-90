@@ -23,11 +23,11 @@ export class AuthPage {
     await this.page.getByRole('menuitem', { name: 'Logout' }).click()
   }
 
-  async getWelcomeHeader() {
+  getWelcomeHeader() {
     return this.page.getByRole('heading', { name: 'Welcome to the administration' })
   }
 
-  async getSignInButton() {
+  getSignInButton() {
     return this.page.getByRole('button', { name: 'Sign in' })
   }
 }

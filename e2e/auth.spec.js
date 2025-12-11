@@ -9,12 +9,12 @@ test.describe('Аутентификация и авторизация', () => {
     await authPage.goto()
   })
 
-  test('Проверка открытия приложения и логин', async ({ page }) => {
+  test('Проверка открытия приложения и логин', async () => {
     await authPage.login(userData.username, userData.password)
     await expect(authPage.getWelcomeHeader()).toBeVisible()
   })
 
-  test('Разлогин', async ({ page }) => {
+  test('Разлогин', async () => {
     await authPage.login(userData.username, userData.password)
     await authPage.logout()
     await expect(authPage.getSignInButton()).toBeVisible()
