@@ -9,14 +9,14 @@ test.describe('Аутентификация и авторизация', () => {
     await authPage.goto()
   })
 
-  test('Проверка открытия приложения и логин', async () => {
+  test('Проверка открытия приложения и логин', async ({ page }) => {
     await authPage.login(userData.username, userData.password)
-    await expect(await authPage.getWelcomeHeader()).toBeVisible()
+    await expect(authPage.getWelcomeHeader()).toBeVisible()
   })
 
-  test('Разлогин', async () => {
+  test('Разлогин', async ({ page }) => {
     await authPage.login(userData.username, userData.password)
     await authPage.logout()
-    await expect(await authPage.getSignInButton()).toBeVisible()
+    await expect(authPage.getSignInButton()).toBeVisible()
   })
 })
