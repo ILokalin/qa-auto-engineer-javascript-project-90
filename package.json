@@ -7,15 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "playwright test"
   },
   "dependencies": {
     "@hexlet/testing-task-manager": "^0.1.5",
     "glob": "^11.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "rimraf": "^6.0.1",
-    "test": "playwright test"
+    "rimraf": "^6.0.1"
   },
   "devDependencies": {
     "@eslint/create-config": "^1.10.0",
